@@ -77,3 +77,42 @@ div[data-section-name='extendLeftTradingLine'] {
     --tv-color-platform-background: #16141c;
     --tv-color-pane-background: #16141c;
 }
+
+/* ============================================
+   HIDE ORDERLY WATERMARK - APEX TRISKELION
+   ============================================ */
+
+/* Hide all watermark elements */
+.tv-lightweight-charts__watermark,
+[class*="watermark"],
+.chart-markup-table .pane-legend-minmax.pane-legend-brand,
+.chart-markup-table .pane-legend-line.pane-legend-brand,
+.pane-legend .pane-legend-title-value-container .pane-legend-title__description,
+.layout__area--center .chart-markup-table .pane-legend-minmax {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Hide watermark image overlays */
+.chart-gui-wrapper [class*="watermark"],
+.chart-container [class*="watermark"],
+.chart-markup-table [class*="brand"] {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* Hide any Orderly branding text */
+[class*="orderly"][class*="watermark"],
+[class*="orderly"][class*="brand"],
+.orderly-watermark,
+.orderly-brand {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide bottom-right watermark area */
+.chart-markup-table td[class*="right"][class*="bottom"] [class*="watermark"],
+.chart-markup-table td[class*="right"][class*="bottom"] [class*="brand"] {
+  display: none !important;
+}

@@ -10,3 +10,41 @@
 .oui-portfolio-page .oui-box.oui-flex.oui-flex-nowrap > div:nth-child(2).oui-box.oui-flex.oui-justify-start.oui-flex-nowrap.oui-relative {
   display: none;
 }
+
+/* ============================================
+   HIDE ORDERLY WATERMARK IN TRADINGVIEW
+   ============================================ */
+
+/* Hide Orderly branding/watermark in TradingView charts */
+.tv-lightweight-charts__watermark,
+[class*="watermark"],
+.chart-markup-table .pane-legend-minmax.pane-legend-brand,
+.chart-markup-table .pane-legend-line.pane-legend-brand,
+div[data-name="legend-source-title"]:has(> div:contains("Orderly")),
+.pane-legend .pane-legend-title-value-container .pane-legend-title__description,
+.layout__area--center .chart-markup-table .pane-legend-minmax,
+.apply-common-tooltip[data-tooltip*="Orderly"],
+.tv-category-header__title:contains("Orderly"),
+.chart-controls-bar__btn-text:contains("Orderly") {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Hide watermark image overlays */
+.chart-gui-wrapper [class*="watermark"],
+.chart-container [class*="watermark"],
+.chart-markup-table [class*="brand"],
+iframe[id*="tradingview"] + div[class*="watermark"] {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* Target Orderly SDK specific watermarks */
+.orderly-watermark,
+.oui-watermark,
+[class*="orderly"][class*="watermark"],
+[class*="oui"][class*="watermark"] {
+  display: none !important;
+  visibility: hidden !important;
+}
